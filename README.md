@@ -30,7 +30,6 @@ app.mount('#app')
 import HomePage from "@/views/Homepage.vue"
 ```
 
-> **Check**
 > Setup `router.js`
 
 ```js
@@ -51,6 +50,7 @@ export const routes = [
 > **Warning**
 > **Don't Use**
 ```js
+// not optimized, use the above
   import HomePage from "@/views/HomePage.vue";
   export const routes = [
     {
