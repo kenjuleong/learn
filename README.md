@@ -124,3 +124,31 @@ function changePath() {
 </script>
 // changed path to: https://example.com/home
 ```
+
+> Use `localStorage` API to store value and items (using usevue, pinia)
+```js
+import { defineStore } from 'pinia';
+import { useStorage } from '@vueuse/core'
+
+export const useBg = defineStore('backgroundColor', {
+    state: () => ({
+        bg: useStorage('bgColor', {color: "black"})
+    }),
+    getters: {
+        getColor() {
+            return this.bg.color
+        }
+    },
+    actions: {
+         toggleBg() {
+            this.bg.color = this.bg.color == "black" ? "white" : "black";
+        }
+    }
+})
+```
+
+> **Info**
+> **Pinia** allow us to define a store like a vue options API
+> - Getters in `pinia` is computes in `vue`: it is a variable with function 
+> - Actions in `pinia` is methods in `vue`: they are functions that can be used
+
