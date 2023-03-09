@@ -30,6 +30,7 @@ app.mount('#app')
 import HomePage from "@/views/Homepage.vue"
 ```
 
+> **Check**
 > Setup `router.js`
 
 ```js
