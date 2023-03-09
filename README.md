@@ -29,3 +29,20 @@ app.mount('#app')
 ```js
 import HomePage from "@/views/Homepage.vue"
 ```
+
+> Setup `router.js`
+
+```js
+export const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: () => import('@/views/HomePage.vue')
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+        component: () => import('@/views/ProjectsPage.vue')
+    }
+]
+```
