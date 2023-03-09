@@ -1,13 +1,12 @@
-import HomePage from '@/views/HomePage.vue';
-import ProjectsPage from '@/views/ProjectsPage.vue';
-
 export const routes = [
     {
         path: '/',
-        component: HomePage
+        name: 'Home',
+        component: () => import('@/views/HomePage.vue')
     },
     {
         path: '/projects',
-        component: ProjectsPage
+        name: 'Projects',
+        component: () => import('@/views/ProjectsPage.vue')
     }
 ]
