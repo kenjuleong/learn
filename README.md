@@ -2,7 +2,7 @@
 
 > To setup router, in main.ts
 
-```vue
+```js
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
@@ -26,6 +26,6 @@ app.mount('#app')
 
 > Use `@` for `/src` source folder
 
-```vue
+```js
 import HomePage from "@/views/Homepage.vue"
 ```
