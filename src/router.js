@@ -8,5 +8,9 @@ export const routes = [
         path: '/projects',
         name: 'Projects',
         component: () => import('@/views/ProjectsPage.vue')
+    },
+    {
+        path: '/projects/:id',
+        component: () => import('@/views/ProjectDynamic.vue')
     }
 ]
