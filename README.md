@@ -147,7 +147,7 @@ export const useBg = defineStore('backgroundColor', {
 })
 ```
 
-> **Info**
+> **info**
 > **Pinia** allow us to define a store like a vue options API
 > - Getters in `pinia` is computes in `vue`: it is a variable with function 
 > - Actions in `pinia` is methods in `vue`: they are functions that can be used
