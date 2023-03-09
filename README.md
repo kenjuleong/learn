@@ -101,3 +101,26 @@ export const routes = [
     <button @click="incrementCount">Click Me</button>
     </template>
 ```
+
+> Difference between `useRoute()` and `useRouter()`
+- use `useRoute()` to get params, path 
+```vue
+// current path: https://example.com/projects/1
+<script setup>
+import { useRoute } from "vue-router";
+const route = useRoute();
+console.log(route.params.id) // 1
+</script>
+```
+- use `useRouter()` to change path
+```vue
+// current path: https://example.com/project
+<script setup>
+import { useRouter } from "vue-router";
+const router = useRouter();
+function changePath() {
+    router.push("/home");
+}
+</script>
+// changed path to: https://example.com/home
+```
