@@ -59,3 +59,15 @@ export const routes = [
     }
 ]
 ```
+
+> In `App.vue` setup
+```vue
+<template>
+        <nav>
+            <router-link to="/">HomePage</router-link><br> // router-link is something like <a href="/"> 
+            <router-link to="/projects">Projects</router-link>
+        </nav>
+        <router-view /> // render the current page (path)
+</div>
+</template>
+```
