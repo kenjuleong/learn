@@ -1,8 +1,4 @@
 import {ref} from "vue";
-export const bgColor = ref("black");
-export function toggleBg() {
-    bgColor.value = bgColor.value == "black" ? "white" : "black";
-}
 
 export const count = ref(0);
 export function useCount() {
@@ -15,11 +11,11 @@ export function useCount() {
 }
 
 export const projects = [
-    'Modmail.js',
-    'Jet Brawley',
-    'Google', 
-    'Github', 
-    'Player', 
-    'Logs Viewer',
-    'Attendance Taker'
+   { name: 'Modmail.js', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' }, 
+   { name: 'Jet Brawley', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' },
+   { name: 'Google', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' }, 
+   { name: 'Github', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' }, 
+   { name: 'Player', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' }, 
+   { name: 'Logs Viewer', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' },
+   { name: 'Attendance Taker', description: "lorem ispum lorem ispum lorem ispum lorem ispum", stars: Math.round(Math.random() * 25), author: '@leecheeyong' }
 ]

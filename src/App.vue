@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { bgColor, toggleBg } from "./composables/store.js";
+import { useBg } from "@/composables/piniaStore.js"; 
+import { watch } from "vue";
+const bg = useBg();
 
 </script>
 
 <template>
-    <div :style="{backgroundColor: bgColor}" style="height: 100vh; padding: 2rem;">
+    <div :style="{backgroundColor: bg.getColor}" style="height: 100vh; padding: 2rem;">
         <nav>
             <router-link to="/">HomePage</router-link><br>
             <router-link to="/projects">Projects</router-link>

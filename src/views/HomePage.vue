@@ -1,8 +1,9 @@
 <script setup lang="ts">
-    import { bgColor, toggleBg } from "@/composables/store.js";
     import { useCount } from "@/composables/store.js";
-    import { watch } from "vue";
+    import { watch, defineProps } from "vue";
     import { useRouter } from "vue-router";
+    import { useBg } from "@/composables/piniaStore.js";
+    const bg = useBg();
 
     const { count, incrementCount } = useCount();
     const router = useRouter();
@@ -15,8 +16,8 @@
     
     <template>
     <h1>Home Page</h1>
-    <button @click="toggleBg">Toggle Button</button>
-    <br><input v-model="bgColor" type="color">
+    <button @click="bg.toggleBg">Toggle Button</button>
+    <br><input v-model="bg.bg.color" type="color">
 
     <p>Press 5 times to switch to /projects</p>
     <h2>You've clicked {{ count }}</h2>
