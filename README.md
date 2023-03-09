@@ -46,3 +46,15 @@ export const routes = [
     }
 ]
 ```
+
+> **Warning**
+> **Don't Use**
+```js
+  import HomePage from "@/views/HomePage.vue";
+  export const routes = [
+    {
+        path: '/',
+        component: HomePage
+    }
+]
+```
