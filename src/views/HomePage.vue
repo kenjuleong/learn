@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import { useCount } from "@/composables/store.js";
-    import { watch, defineProps } from "vue";
+    import { watch } from "vue";
     import { useRouter } from "vue-router";
     import { useBg } from "@/composables/piniaStore.js";
     const bg = useBg();
